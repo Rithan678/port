@@ -41,7 +41,7 @@ jobs:
         run: npm --prefix ./portfolio install
 
       - name: Build (inner folder)
-        run: npm --prefix ./portfolio run build
+        run: npm --prefix ./portfolio run build -- --webpack
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
