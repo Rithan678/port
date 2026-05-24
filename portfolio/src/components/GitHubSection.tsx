@@ -12,7 +12,7 @@ export default function GitHubSection() {
   }, []);
 
   return (
-    <section className="relative py-40 px-6 max-w-7xl mx-auto">
+    <section className="relative py-24 md:py-40 px-6 max-w-7xl mx-auto">
       
       {/* Divider */}
       <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -40,7 +40,7 @@ export default function GitHubSection() {
         </div>
 
         {/* Calendar Card */}
-        <div className="glass-card overflow-x-auto rounded-[32px] p-6 md:p-10">
+        <div className="glass-card overflow-x-auto rounded-[24px] md:rounded-[32px] p-6 md:p-10">
 
           {mounted ? (
             <GitHubCalendar

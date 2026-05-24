@@ -23,7 +23,7 @@ export default function ProjectModal({
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-2xl">
       <div className="absolute inset-0" onClick={onClose} />
 
-      <div className="glass-card relative z-10 w-[92%] max-w-5xl rounded-[40px] p-8 md:p-16">
+      <div className="glass-card relative z-10 w-[92%] max-w-5xl rounded-[24px] md:rounded-[40px] p-6 md:p-16">
         <div className="absolute right-0 top-0 h-[300px] w-[300px] rounded-full bg-white/5 blur-[120px]" />
 
         <button
@@ -45,7 +45,7 @@ export default function ProjectModal({
           {project.desc}
         </p>
 
-        <div className="group relative mt-12 overflow-hidden rounded-[32px] border border-white/10">
+        <div className="group relative mt-12 overflow-hidden rounded-[24px] md:rounded-[32px] border border-white/10">
           <div className="relative h-[420px] overflow-hidden">
             <Image
               src={project.image}

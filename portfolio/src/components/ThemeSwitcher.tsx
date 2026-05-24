@@ -14,7 +14,7 @@ export default function ThemeSwitcher() {
   if (!mounted) return null;
 
   return (
-    <div className="fixed right-6 top-20 z-50 flex gap-2 rounded-full border border-white/10 bg-black/40 p-2 backdrop-blur-xl">
+    <div className="relative md:fixed md:right-6 md:top-20 z-50 flex gap-2 rounded-full border border-white/10 bg-black/40 p-2 backdrop-blur-xl">
       {themes.map((t) => (
         <button
           key={t}

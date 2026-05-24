@@ -15,7 +15,7 @@ const skills = [
 
 export default function TechOrbit() {
   return (
-    <section className="relative flex min-h-[700px] items-center justify-center overflow-hidden py-40">
+    <section className="relative hidden md:flex min-h-[500px] items-center justify-center overflow-hidden py-24 md:py-40">
       <div className="glass-card relative z-10 flex h-56 w-56 items-center justify-center rounded-full text-center">
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-xs uppercase tracking-[0.6em] text-neutral-400">

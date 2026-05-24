@@ -69,7 +69,7 @@ export default function CommandPalette() {
 
       {open && (
         <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-xl">
-          <div className="mx-auto mt-[12vh] w-[92%] max-w-2xl overflow-hidden rounded-[32px] border border-white/10 bg-[#0a0a0a] shadow-2xl">
+          <div className="mx-auto mt-[12vh] w-[92%] max-w-2xl overflow-hidden rounded-[24px] md:rounded-[32px] border border-white/10 bg-[#0a0a0a] shadow-2xl">
             <Command className="w-full">
               <Command.Input
                 autoFocus

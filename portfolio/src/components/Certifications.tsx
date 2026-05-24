@@ -32,7 +32,7 @@ const certifications = [
 export default function Certifications() {
   return (
     <section
-      className="relative py-40 px-6 max-w-7xl mx-auto"
+      className="relative py-24 md:py-40 px-6 max-w-7xl mx-auto"
     >
       <div className="pointer-events-none absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
@@ -49,7 +49,7 @@ export default function Certifications() {
       </Reveal>
 
       {/* Grid */}
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {certifications.map((cert, index) => (
           <Tilt
             key={index}
@@ -59,10 +59,10 @@ export default function Certifications() {
             glareMaxOpacity={0.08}
             scale={1.01}
             transitionSpeed={1500}
-            className="rounded-[28px]"
+            className="rounded-[24px] md:rounded-[28px]"
           >
             <Reveal
-              className="glass-card spotlight-card rounded-[28px] p-8"
+              className="glass-card spotlight-card rounded-[24px] md:rounded-[28px] p-6 md:p-8"
             >
               <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-6">
                 {cert.issuer}

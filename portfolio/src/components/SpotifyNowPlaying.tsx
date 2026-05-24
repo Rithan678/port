@@ -24,7 +24,7 @@ export default async function SpotifyNowPlaying() {
     song.item.album.images[0].url;
 
   return (
-    <div className="glass-card rounded-[32px] p-6">
+    <div className="glass-card rounded-[24px] md:rounded-[32px] p-6">
       <p className="mb-4 text-xs uppercase tracking-[0.3em] text-neutral-500">
         Now Playing
       </p>

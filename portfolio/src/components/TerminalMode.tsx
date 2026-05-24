@@ -84,7 +84,7 @@ export default function TerminalMode() {
       </button>
 
       {open && (
-        <div className="fixed bottom-6 left-6 z-[9999] flex h-[70vh] w-[92%] max-w-2xl flex-col overflow-hidden rounded-[32px] border border-white/10 bg-[#050505]/95 shadow-2xl backdrop-blur-2xl">
+        <div className="relative md:fixed md:bottom-6 md:left-6 z-[9999] flex h-[70vh] w-[92%] max-w-2xl mx-auto flex-col overflow-hidden rounded-[24px] md:rounded-[32px] border border-white/10 bg-[#050505]/95 shadow-2xl backdrop-blur-2xl">
           <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-red-500" />

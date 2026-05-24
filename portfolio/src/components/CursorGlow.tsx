@@ -36,7 +36,7 @@ export default function CursorGlow() {
         x: smoothX,
         y: smoothY,
       }}
-      className="pointer-events-none fixed top-0 left-0 z-30 h-[300px] w-[300px] rounded-full bg-blue-500/10 blur-[120px]"
+      className="pointer-events-none hidden md:block fixed top-0 left-0 z-30 h-[300px] w-[300px] rounded-full bg-blue-500/10 blur-[120px]"
     />
   );
 }

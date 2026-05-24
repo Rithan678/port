@@ -35,7 +35,7 @@ export default function Hero() {
   );
 
   return (
-    <section className="relative min-h-screen overflow-hidden px-6 flex items-center">
+    <section className="relative min-h-screen overflow-hidden px-6 flex items-center py-24 md:py-40">
       <div className="aurora left-[10%] top-[10%] h-[350px] w-[350px] bg-cyan-500/30" />
 
       <div className="aurora right-[10%] top-[20%] h-[300px] w-[300px] bg-purple-500/30" />
@@ -70,7 +70,7 @@ export default function Hero() {
         className="absolute right-[-150px] top-1/3 h-[400px] w-[400px] rounded-full bg-blue-500/10 blur-[120px]"
       />
 
-      <div className="relative z-10 mx-auto grid w-full max-w-[1400px] items-center gap-16 pt-32 md:pt-24 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
+      <div className="relative z-10 mx-auto grid w-full max-w-[1400px] items-center gap-16 pt-24 md:pt-40 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
         <motion.div
           style={{
             y: textY,
@@ -125,10 +125,8 @@ export default function Hero() {
                     duration: 1,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className={`text-[42px] font-medium leading-[0.95] tracking-[-0.06em] sm:text-[64px] md:text-[92px] md:leading-[0.9] ${
-                    index === 3
-                      ? "shimmer-text"
-                      : ""
+                  className={`text-4xl md:text-7xl font-medium leading-[0.95] tracking-[-0.06em] ${
+                    index === 3 ? "shimmer-text" : ""
                   }`}
                 >
                   {line}

@@ -4,10 +4,10 @@ import Reveal from "./Reveal";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-40 px-6 max-w-7xl mx-auto">
+    <section id="contact" className="relative py-24 md:py-40 px-6 max-w-7xl mx-auto">
       <div className="pointer-events-none absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      <Reveal className="glass-card rounded-[40px] p-10 md:p-20 overflow-hidden relative">
+      <Reveal className="glass-card rounded-[24px] md:rounded-[40px] p-6 md:p-20 overflow-hidden relative">
         {/* Glow */}
         <div className="absolute top-[-100px] right-[-100px] w-[300px] h-[300px] bg-blue-500/10 blur-[120px] rounded-full" />
 

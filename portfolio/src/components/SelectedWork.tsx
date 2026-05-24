@@ -39,7 +39,7 @@ export default function SelectedWork() {
 
       <section
         id="work"
-        className="relative mx-auto max-w-7xl px-6 py-40"
+        className="relative mx-auto max-w-7xl px-6 py-24 md:py-40"
       >
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -64,13 +64,13 @@ export default function SelectedWork() {
               glareMaxOpacity={0.08}
               scale={1.01}
               transitionSpeed={1500}
-              className="rounded-[32px] md:col-span-2"
+              className="rounded-[24px] md:rounded-[32px] md:col-span-2"
             >
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.4 }}
                 onClick={() => setSelectedProject(projects[0])}
-                className="glass-card spotlight-card group relative cursor-pointer rounded-[32px]"
+                className="glass-card spotlight-card group relative cursor-pointer rounded-[24px] md:rounded-[32px]"
               >
                 <div className="relative h-[500px] overflow-hidden">
                   <Image
@@ -101,10 +101,10 @@ export default function SelectedWork() {
             </Tilt>
           </div>
 
-          <div className="md:hidden">
+            <div className="md:hidden">
             <div
               onClick={() => setSelectedProject(projects[0])}
-              className="glass-card spotlight-card group relative cursor-pointer rounded-[32px]"
+              className="glass-card spotlight-card group relative cursor-pointer rounded-[24px] md:rounded-[32px]"
             >
               <div className="relative h-[420px] overflow-hidden">
                 <Image
@@ -143,13 +143,13 @@ export default function SelectedWork() {
                 glareMaxOpacity={0.08}
                 scale={1.01}
                 transitionSpeed={1500}
-                className="rounded-[32px]"
+                className="rounded-[24px] md:rounded-[32px]"
               >
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.4 }}
                   onClick={() => setSelectedProject(projects[1])}
-                  className="glass-card spotlight-card group relative cursor-pointer rounded-[32px]"
+                  className="glass-card spotlight-card group relative cursor-pointer rounded-[24px] md:rounded-[32px]"
                 >
                   <div className="relative h-[240px] overflow-hidden">
                     <Image
@@ -179,7 +179,7 @@ export default function SelectedWork() {
             <div className="md:hidden">
               <div
                 onClick={() => setSelectedProject(projects[1])}
-                className="glass-card spotlight-card group relative cursor-pointer rounded-[32px]"
+                className="glass-card spotlight-card group relative cursor-pointer rounded-[24px] md:rounded-[32px]"
               >
                 <div className="relative h-[200px] overflow-hidden">
                   <Image
@@ -213,12 +213,12 @@ export default function SelectedWork() {
                 glareMaxOpacity={0.08}
                 scale={1.01}
                 transitionSpeed={1500}
-                className="rounded-[32px]"
+                className="rounded-[24px] md:rounded-[32px]"
               >
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.4 }}
-                  className="glass-card spotlight-card rounded-[32px] p-8"
+                  className="glass-card spotlight-card rounded-[24px] md:rounded-[32px] p-6 md:p-8"
                 >
                   <p className="mb-6 text-xs uppercase tracking-[0.3em] text-neutral-500">
                     Focus
@@ -247,8 +247,8 @@ export default function SelectedWork() {
               </Tilt>
             </div>
 
-            <div className="md:hidden">
-              <div className="glass-card spotlight-card rounded-[32px] p-6">
+              <div className="md:hidden">
+              <div className="glass-card spotlight-card rounded-[24px] md:rounded-[32px] p-6">
                 <p className="mb-4 text-xs uppercase tracking-[0.3em] text-neutral-500">
                   Focus
                 </p>

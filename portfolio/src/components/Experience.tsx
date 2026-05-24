@@ -7,7 +7,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="relative py-40 px-6 max-w-7xl mx-auto"
+      className="relative py-24 md:py-40 px-6 max-w-7xl mx-auto"
     >
       <div className="pointer-events-none absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
@@ -31,9 +31,9 @@ export default function Experience() {
         glareMaxOpacity={0.08}
         scale={1.01}
         transitionSpeed={1500}
-        className="rounded-[32px]"
+        className="rounded-[24px] md:rounded-[32px]"
       >
-        <Reveal className="glass-card rounded-[32px] p-8 md:p-12">
+        <Reveal className="glass-card rounded-[24px] md:rounded-[32px] p-6 md:p-12">
           <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
             {/* LEFT */}
             <div>

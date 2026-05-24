@@ -15,11 +15,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-40 px-6 max-w-7xl mx-auto"
+      className="relative py-24 md:py-40 px-6 max-w-7xl mx-auto"
     >
       <div className="pointer-events-none absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      <div className="grid lg:grid-cols-2 gap-20 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
         {/* LEFT CONTENT */}
         <Reveal className="">
           <p className="uppercase tracking-[0.3em] text-neutral-500 text-xs md:text-sm mb-8">
@@ -53,7 +53,7 @@ export default function About() {
         </Reveal>
 
         {/* RIGHT SIDE */}
-        <Reveal className="grid grid-cols-2 gap-4">
+        <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {skills.map((skill, index) => (
             <div
               key={index}

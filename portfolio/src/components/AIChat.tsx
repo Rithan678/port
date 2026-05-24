@@ -160,15 +160,14 @@ export default function AIChat() {
           playSound("/sounds/open.mp3");
           setOpen(!open);
         }}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-xl backdrop-blur-xl transition hover:scale-110 hover:bg-white/[0.08]"
+        className="fixed bottom-5 right-4 md:bottom-6 md:right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-xl backdrop-blur-xl transition hover:scale-110 hover:bg-white/[0.08]"
       >
         🤖
       </button>
 
       {open && (
         <div
-          className="glass-card z-50 w-[92vw] max-w-[360px] rounded-[32px] bg-[#0a0a0a]/90"
-          style={{ position: "fixed", bottom: "6rem", right: "1.5rem" }}
+          className="glass-card z-50 w-[92vw] max-w-[360px] rounded-[32px] bg-[#0a0a0a]/90 md:fixed md:bottom-20 md:right-6 relative mx-auto md:mx-0"
         >
             <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
               <div>
@@ -195,7 +194,7 @@ export default function AIChat() {
               </button>
             </div>
 
-            <div ref={containerRef} className="h-[420px] overflow-y-auto px-4 py-4">
+            <div ref={containerRef} className="h-[60vh] md:h-[420px] overflow-y-auto px-4 py-4">
               <div className="flex flex-wrap gap-2 px-4 pt-4">
                 {suggestions.map((item, index) => (
                   <button

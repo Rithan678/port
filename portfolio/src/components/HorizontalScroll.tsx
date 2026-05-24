@@ -67,7 +67,7 @@ export default function HorizontalScroll() {
   return (
     <section
       ref={triggerRef}
-      className="relative h-[100vh] overflow-hidden"
+      className="hidden md:block relative h-[100vh] overflow-hidden"
     >
       <div
         ref={sectionRef}
@@ -78,7 +78,7 @@ export default function HorizontalScroll() {
             key={index}
             className="flex h-screen w-screen items-center justify-center p-10"
           >
-            <div className="glass-card flex max-w-3xl flex-col justify-center rounded-[40px] p-16">
+            <div className="glass-card flex max-w-3xl flex-col justify-center rounded-[24px] md:rounded-[40px] p-6 md:p-16">
               <p className="mb-6 text-xs uppercase tracking-[0.3em] text-neutral-500">
                 Featured Project
               </p>
