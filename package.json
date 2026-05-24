@@ -2,7 +2,8 @@
   "scripts": {
     "build": "cd ./portfolio && NEXT_PUBLIC_BASE_PATH=/port npx next build --webpack",
     "dev": "cd ./portfolio && npm run dev",
-    "lint": "cd ./portfolio && npm run lint"
+    "lint": "cd ./portfolio && npm run lint",
+    "deploy": "npx gh-pages -d portfolio/out -r https://github.com/Rithan678/port.git -b gh-pages"
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0.65",
