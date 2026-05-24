@@ -55,8 +55,8 @@ jobs:
           cat ./portfolio/package.json || true
           echo "--- Build will run in the next step ---"
 
-      - name: Build (inner folder)
-        run: npm --prefix ./portfolio run build -- --webpack
+      - name: Build (root script)
+        run: npm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

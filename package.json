@@ -4,7 +4,7 @@
     "dev": "cd ./portfolio && npm run dev",
     "start": "cd ./portfolio && npm run dev",
     "lint": "cd ./portfolio && npm run lint",
-    "deploy": "npx gh-pages -d portfolio/out -r https://github.com/Rithan678/port.git -b gh-pages"
+    "deploy": "npm run build && npx gh-pages -d portfolio/out -r https://github.com/Rithan678/port.git -b gh-pages"
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0.65",
