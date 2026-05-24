@@ -40,6 +40,20 @@ jobs:
       - name: Install (inner folder)
         run: npm --prefix ./portfolio install
 
+      - name: Debug (inner folder)
+        run: |
+          echo "--- Environment ---"
+          node -v || true
+          npm -v || true
+          echo "--- npm config (inner) ---"
+          npm --prefix ./portfolio config list || true
+          echo "--- Listing ./portfolio ---"
+          ls -la ./portfolio || true
+          echo "--- package.json (inner) ---"
+          cat ./portfolio/package.json || true
+          echo "--- Attempting build (inner) ---"
+          npm --prefix ./portfolio run build -- --webpack
+
       - name: Build (inner folder)
         run: npm --prefix ./portfolio run build -- --webpack
 
