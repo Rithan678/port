@@ -40,9 +40,9 @@ jobs:
         working-directory: ./portfolio
         run: npm ci
 
-      - name: Build & Export (inner folder)
+      - name: Build (inner folder)
         working-directory: ./portfolio
-        run: npm run export
+        run: npm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
