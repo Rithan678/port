@@ -32,7 +32,7 @@ export default function Reveal({
       initial={{
         opacity: 0,
         y: 60,
-        filter: "blur(12px)",
+        filter: "blur(4px)",
       }}
       whileInView={{
         opacity: 1,
@@ -40,7 +40,7 @@ export default function Reveal({
         filter: "blur(0px)",
       }}
       transition={{
-        duration: 1,
+        duration: 0.45,
         ease: [0.22, 1, 0.36, 1],
       }}
       viewport={{

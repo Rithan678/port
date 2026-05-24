@@ -192,11 +192,38 @@ section {
 }
 
 .cyber {
-  background: radial-gradient(circle at top, #0f172a, #020617);
+  background: #020617;
   color: #67e8f9;
 }
 
 .minimal {
   background: #ffffff;
   color: #111111;
+}
+
+@media (max-width: 768px) {
+  * {
+    animation-duration: 0.4s !important;
+    transition-duration: 0.25s !important;
+  }
+
+  .glass-card,
+  .glass-card:hover {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .backdrop-blur-2xl {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+  }
+
+  .backdrop-blur-xl {
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+
+  .blur-\[140px\] {
+    filter: blur(40px) !important;
+  }
 }

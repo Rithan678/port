@@ -160,14 +160,14 @@ export default function AIChat() {
           playSound("/sounds/open.mp3");
           setOpen(!open);
         }}
-        className="fixed bottom-5 right-4 md:bottom-6 md:right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-xl backdrop-blur-xl transition hover:scale-110 hover:bg-white/[0.08]"
+        className="fixed bottom-5 right-4 md:bottom-6 md:right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-xl backdrop-blur-md md:backdrop-blur-xl transition hover:scale-110 hover:bg-white/[0.08]"
       >
         🤖
       </button>
 
       {open && (
         <div
-          className="glass-card z-50 w-[92vw] md:w-[360px] rounded-[32px] bg-black/95 md:fixed md:bottom-20 md:right-6 relative mx-auto md:mx-0"
+          className="glass-card z-50 w-[92vw] md:w-[360px] rounded-[32px] bg-neutral-950 md:fixed md:bottom-20 md:right-6 relative mx-auto md:mx-0 backdrop-blur-md md:backdrop-blur-2xl"
         >
             <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
               <div>

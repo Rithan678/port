@@ -78,13 +78,13 @@ export default function TerminalMode() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="hidden md:flex fixed bottom-24 left-6 z-50 rounded-full border border-white/10 bg-black/40 px-4 py-2 text-xs text-neutral-400 backdrop-blur-xl transition hover:bg-white/[0.06]"
+        className="hidden md:block fixed bottom-24 left-6 z-50 rounded-full border border-white/10 bg-black/40 px-4 py-2 text-xs text-neutral-400 backdrop-blur-xl transition hover:bg-white/[0.06]"
       >
         terminal
       </button>
 
       {open && (
-        <div className="relative md:fixed md:bottom-6 md:left-6 z-[9999] flex h-[70vh] w-[92%] max-w-2xl mx-auto flex-col overflow-hidden rounded-[24px] md:rounded-[32px] border border-white/10 bg-[#050505]/95 shadow-2xl backdrop-blur-2xl">
+        <div className="relative md:fixed md:bottom-6 md:left-6 z-[9999] flex h-[70vh] w-[92%] max-w-2xl mx-auto flex-col overflow-hidden rounded-[24px] md:rounded-[32px] border border-white/10 bg-[#050505]/95 shadow-2xl backdrop-blur-md md:backdrop-blur-2xl">
           <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-red-500" />
