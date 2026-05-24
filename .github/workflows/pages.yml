@@ -37,12 +37,10 @@ jobs:
           cache: 'npm'
 
       - name: Install (inner folder)
-        working-directory: ./portfolio
-        run: npm ci
+        run: npm --prefix ./portfolio ci
 
       - name: Build (inner folder)
-        working-directory: ./portfolio
-        run: npm run build
+        run: npm --prefix ./portfolio run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
