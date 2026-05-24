@@ -74,7 +74,7 @@ export default function TechOrbit() {
         })}
       </motion.div>
 
-      <div className="absolute h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[140px]" />
+      <div className="absolute h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[60px] md:blur-[140px]" />
     </section>
   );
 }

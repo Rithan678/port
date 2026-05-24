@@ -44,8 +44,8 @@ export default function Home() {
         <ThemeSwitcher />
         <AIChat />
         <div className="pointer-events-none fixed inset-0 z-[0] grid-background" />
-        <div className="pointer-events-none fixed top-[-200px] left-[-100px] z-[0] h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[140px]" />
-        <div className="pointer-events-none fixed bottom-[-200px] right-[-100px] z-[0] h-[500px] w-[500px] rounded-full bg-purple-500/10 blur-[140px]" />
+        <div className="pointer-events-none fixed top-[-200px] left-[-100px] z-[0] h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[60px] md:blur-[140px]" />
+        <div className="pointer-events-none fixed bottom-[-200px] right-[-100px] z-[0] h-[500px] w-[500px] rounded-full bg-purple-500/10 blur-[60px] md:blur-[140px]" />
         <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/[0.06] to-transparent" />
         <Navbar />
         <Hero />
@@ -58,11 +58,13 @@ export default function Home() {
           <Experience />
         </Reveal>
 
-        <ParallaxSection>
-          <Reveal>
-            <TechOrbit />
-          </Reveal>
-        </ParallaxSection>
+        <div className="hidden md:block">
+          <ParallaxSection>
+            <Reveal>
+              <TechOrbit />
+            </Reveal>
+          </ParallaxSection>
+        </div>
 
         <SpotifyNowPlaying />
         <ParallaxSection>

@@ -167,7 +167,7 @@ export default function AIChat() {
 
       {open && (
         <div
-          className="glass-card z-50 w-[92vw] max-w-[360px] rounded-[32px] bg-[#0a0a0a]/90 md:fixed md:bottom-20 md:right-6 relative mx-auto md:mx-0"
+          className="glass-card z-50 w-[92vw] md:w-[360px] rounded-[32px] bg-black/95 md:fixed md:bottom-20 md:right-6 relative mx-auto md:mx-0"
         >
             <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
               <div>
@@ -194,7 +194,7 @@ export default function AIChat() {
               </button>
             </div>
 
-            <div ref={containerRef} className="h-[60vh] md:h-[420px] overflow-y-auto px-4 py-4">
+            <div ref={containerRef} className="h-[65vh] md:h-[420px] overflow-y-auto px-4 py-4">
               <div className="flex flex-wrap gap-2 px-4 pt-4">
                 {suggestions.map((item, index) => (
                   <button
@@ -216,8 +216,8 @@ export default function AIChat() {
                   key={index}
                   className={`mb-4 rounded-2xl px-4 py-3 text-sm ${
                     m.role === "user"
-                      ? "ml-auto max-w-[80%] bg-white text-black"
-                      : "max-w-[85%] bg-white/[0.05] text-neutral-300"
+                      ? "ml-auto max-w-[80%] bg-cyan-400 text-black"
+                      : "max-w-[85%] bg-neutral-900 text-neutral-300"
                   }`}
                 >
                   {m.role === "assistant" ? (

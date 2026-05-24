@@ -42,7 +42,7 @@ export default function Certifications() {
           Certifications
         </p>
 
-        <h2 className="text-4xl md:text-6xl leading-tight tracking-tight font-medium">
+        <h2 className="text-3xl md:text-6xl leading-tight tracking-tight font-medium">
           Continuous learning
           <span className="block text-neutral-500">through creativity & technology.</span>
         </h2>

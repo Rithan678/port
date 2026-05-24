@@ -54,7 +54,7 @@ export default function Hero() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-[-200px] left-1/2 -translate-x-1/2 h-[900px] w-[900px] rounded-full bg-white/5 blur-[140px]"
+        className="absolute top-[-200px] left-1/2 -translate-x-1/2 h-[900px] w-[900px] rounded-full bg-white/5 blur-[60px] md:blur-[140px]"
       />
 
       <motion.div

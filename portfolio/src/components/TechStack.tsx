@@ -34,7 +34,7 @@ export default function TechStack() {
             Tech Stack
           </p>
 
-          <h2 className="text-4xl font-medium tracking-tight md:text-6xl">
+          <h2 className="text-3xl font-medium tracking-tight md:text-6xl">
             Technologies &
             <span className="block text-neutral-500">
               creative tools I use.

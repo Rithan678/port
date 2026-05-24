@@ -31,7 +31,7 @@ export default function GitHubSection() {
             GitHub Activity
           </p>
 
-          <h2 className="text-4xl font-medium leading-tight tracking-tight md:text-6xl">
+          <h2 className="text-3xl font-medium leading-tight tracking-tight md:text-6xl">
             Building consistently
             <span className="block text-neutral-500">
               through code & experimentation.
