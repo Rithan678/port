@@ -18,6 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_BASE_PATH: /port
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
