@@ -37,7 +37,7 @@ jobs:
           cache: 'npm'
 
       - name: Install (inner folder)
-        run: npm --prefix ./portfolio ci
+        run: npm --prefix ./portfolio install
 
       - name: Build (inner folder)
         run: npm --prefix ./portfolio run build
