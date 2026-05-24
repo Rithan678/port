@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "deploy": "cd ./portfolio && NEXT_PUBLIC_BASE_PATH=/port npx next build --webpack && touch out/.nojekyll && npx gh-pages -d out -b gh-pages --dotfiles -r \"$(git -C .. config --get remote.origin.url)\"",
     "build": "cd ./portfolio && NEXT_PUBLIC_BASE_PATH=/port npx next build --webpack",
     "dev": "cd ./portfolio && npm run dev",
     "lint": "cd ./portfolio && npm run lint"
