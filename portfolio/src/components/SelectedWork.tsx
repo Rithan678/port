@@ -7,20 +7,23 @@ import Tilt from "react-parallax-tilt";
 import Reveal from "./Reveal";
 import ProjectModal from "./ProjectModal";
 
-const projects = [
-  {
-    title: "CureMe",
-    desc: "A wearable health-tech jewelry concept blending luxury aesthetics with life-saving technology.",
-    image: "/cureme.jpg",
-  },
-  {
-    title: "IQAC Bulletin",
-    desc: "An editorial design system for storytelling, layout, and publication impact.",
-    image: "/iqac.jpg",
-  },
-];
-
 export default function SelectedWork() {
+  const basePath =
+    process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+  const projects = [
+    {
+      title: "CureMe",
+      desc: "A wearable health-tech jewelry concept blending luxury aesthetics with life-saving technology.",
+      image: `${basePath}/cureme.jpg`,
+    },
+    {
+      title: "IQAC Bulletin",
+      desc: "An editorial design system for storytelling, layout, and publication impact.",
+      image: `${basePath}/iqac.jpg`,
+    },
+  ];
+
   const [selectedProject, setSelectedProject] =
     useState<(typeof projects)[number] | null>(null);
 

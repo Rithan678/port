@@ -4,6 +4,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export default function Loader() {
+  const basePath =
+    process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   const [loading, setLoading] = useState(true);
   const audioRef =
     useRef<HTMLAudioElement>(null);
@@ -103,7 +106,7 @@ export default function Loader() {
 
           <audio
             ref={audioRef}
-            src="/sounds/intro.mp3"
+            src={`${basePath}/sounds/intro.mp3`}
             preload="auto"
           />
         </motion.div>

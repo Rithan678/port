@@ -11,6 +11,9 @@ import DynamicGreeting from "./DynamicGreeting";
 import StatusBadge from "./StatusBadge";
 
 export default function Hero() {
+  const basePath =
+    process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   const { scrollY } = useScroll();
 
   const textY = useTransform(
@@ -195,7 +198,7 @@ export default function Hero() {
 
           <div className="relative h-[260px] w-[260px] overflow-hidden rounded-full border border-white/10 sm:h-[320px] sm:w-[320px] md:h-[420px] md:w-[420px]">
             <Image
-              src="/profile.jpg"
+              src={`${basePath}/profile.jpg`}
               alt="Rithan Dsouza"
               fill
               sizes="(max-width: 768px) 320px, 420px"
