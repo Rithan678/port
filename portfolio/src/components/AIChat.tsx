@@ -160,15 +160,22 @@ export default function AIChat() {
           playSound("/sounds/open.mp3");
           setOpen(!open);
         }}
-        className="fixed bottom-5 right-4 md:bottom-6 md:right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-xl backdrop-blur-md md:backdrop-blur-xl transition hover:scale-110 hover:bg-white/[0.08]"
+        className="fixed bottom-5 left-1/2 z-50 flex h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-xl backdrop-blur-md transition hover:scale-110 hover:bg-white/[0.08] md:bottom-6 md:left-auto md:right-6 md:translate-x-0 md:backdrop-blur-xl"
       >
         🤖
       </button>
 
       {open && (
-        <div
-          className="glass-card z-50 w-[92vw] md:w-[360px] rounded-[32px] bg-neutral-950 md:fixed md:bottom-20 md:right-6 relative mx-auto md:mx-0 backdrop-blur-md md:backdrop-blur-2xl"
-        >
+        <>
+          <button
+            type="button"
+            aria-label="Close AI assistant"
+            onClick={() => setOpen(false)}
+            className="fixed inset-0 z-[60] cursor-default bg-black/55 backdrop-blur-[2px]"
+          />
+
+          <div className="fixed inset-0 z-[70] flex items-center justify-center p-4">
+            <div className="glass-card w-full max-w-[360px] overflow-hidden rounded-[32px] bg-neutral-950 backdrop-blur-md md:backdrop-blur-2xl">
             <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
               <div>
                 <h2 className="text-sm font-medium">
@@ -194,7 +201,7 @@ export default function AIChat() {
               </button>
             </div>
 
-            <div ref={containerRef} className="h-[65vh] md:h-[420px] overflow-y-auto px-4 py-4">
+            <div ref={containerRef} className="h-[65vh] max-h-[70vh] overflow-y-auto px-4 py-4 md:h-[420px] md:max-h-none">
               <div className="flex flex-wrap gap-2 px-4 pt-4">
                 {suggestions.map((item, index) => (
                   <button
@@ -258,8 +265,10 @@ export default function AIChat() {
                 className="w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm outline-none placeholder:text-neutral-500"
               />
             </form>
+            </div>
           </div>
-        )}
+        </>
+      )}
     </>
   );
 }

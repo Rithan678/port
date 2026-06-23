@@ -62,7 +62,7 @@ function DockItem({
   const scale = useTransform(
     distance,
     [-150, 0, 150],
-    [1, 1.8, 1]
+    [1, 1.25, 1]
   );
 
   const smoothScale = useSpring(scale, {

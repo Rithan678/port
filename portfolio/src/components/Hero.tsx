@@ -22,12 +22,6 @@ export default function Hero() {
     [0, 120]
   );
 
-  const imageY = useTransform(
-    scrollY,
-    [0, 500],
-    [0, 180]
-  );
-
   const opacity = useTransform(
     scrollY,
     [0, 400],
@@ -35,7 +29,7 @@ export default function Hero() {
   );
 
   return (
-    <section className="relative min-h-screen overflow-hidden px-6 flex items-center py-24 md:py-40">
+    <section className="relative min-h-screen overflow-hidden px-6 flex items-start py-20 md:py-24">
       <div className="aurora left-[10%] top-[10%] h-[350px] w-[350px] bg-cyan-500/30" />
 
       <div className="aurora right-[10%] top-[20%] h-[300px] w-[300px] bg-purple-500/30" />
@@ -70,7 +64,7 @@ export default function Hero() {
         className="absolute right-[-150px] top-1/3 h-[400px] w-[400px] rounded-full bg-blue-500/10 blur-[120px]"
       />
 
-      <div className="relative z-10 mx-auto grid w-full max-w-[1400px] items-center gap-16 pt-24 md:pt-40 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
+      <div className="relative z-10 mx-auto grid w-full max-w-[1400px] items-center gap-16 pt-16 md:pt-24 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
         <motion.div
           style={{
             y: textY,
@@ -168,38 +162,30 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          style={{
-            y: imageY,
-          }}
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.96 }}
           animate={{
             opacity: 1,
             scale: 1,
-            y: [0, -12, 0],
           }}
           transition={{
             opacity: {
-              duration: 1,
+              duration: 0.7,
             },
             scale: {
-              duration: 1,
-            },
-            y: {
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
+              duration: 0.7,
             },
           }}
           className="relative mt-10 flex justify-center lg:-mt-10 lg:mt-0 lg:justify-end"
         >
-          <div className="absolute inset-0 rounded-full bg-blue-500/10 blur-[100px]" />
+          <div className="absolute inset-0 rounded-full bg-blue-500/10 blur-[40px] md:blur-[100px]" />
 
-          <div className="relative h-[260px] w-[260px] overflow-hidden rounded-full border border-white/10 sm:h-[320px] sm:w-[320px] md:h-[420px] md:w-[420px]">
+          <div className="gpu relative h-[260px] w-[260px] overflow-hidden rounded-full border border-white/10 sm:h-[320px] sm:w-[320px] md:h-[420px] md:w-[420px]">
             <Image
               src={`${basePath}/profile.jpg`}
               alt="Rithan Dsouza"
               fill
-              sizes="(max-width: 768px) 320px, 420px"
+              quality={80}
+              sizes="(max-width: 768px) 280px, 420px"
               priority
               className="object-cover"
             />

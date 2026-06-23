@@ -8,32 +8,58 @@ const certifications = [
     title: "Create Scroll-Stopping Content",
     issuer: "Canva",
     year: "2026",
+    icon: "🎨",
   },
 
   {
     title: "Human-Centered Design",
     issuer: "Canva",
     year: "2026",
+    icon: "✍️",
   },
 
   {
     title: "Work Smarter with AI",
     issuer: "Canva",
     year: "2025",
+    icon: "⚡",
   },
 
   {
     title: "Graphic Design Essentials",
     issuer: "Canva",
     year: "2024",
+    icon: "✨",
   },
 ];
 
+function CertificationCard({
+  cert,
+}: {
+  cert: (typeof certifications)[number];
+}) {
+  return (
+    <Reveal className="glass-card spotlight-card rounded-[24px] md:rounded-[28px] p-6 md:p-8">
+      <div className="text-4xl mb-6">
+        {cert.icon}
+      </div>
+
+      <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-6">
+        {cert.issuer}
+      </p>
+
+      <h3 className="text-2xl md:text-3xl font-medium tracking-tight leading-tight">
+        {cert.title}
+      </h3>
+
+      <p className="mt-6 text-neutral-500">Issued in {cert.year}</p>
+    </Reveal>
+  );
+}
+
 export default function Certifications() {
   return (
-    <section
-      className="relative py-24 md:py-40 px-6 max-w-7xl mx-auto"
-    >
+    <section className="relative py-24 md:py-40 px-6 max-w-7xl mx-auto">
       <div className="pointer-events-none absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       {/* Heading */}
@@ -51,30 +77,24 @@ export default function Certifications() {
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {certifications.map((cert, index) => (
-          <Tilt
-            key={index}
-            tiltMaxAngleX={6}
-            tiltMaxAngleY={6}
-            glareEnable={true}
-            glareMaxOpacity={0.08}
-            scale={1.01}
-            transitionSpeed={1500}
-            className="rounded-[24px] md:rounded-[28px]"
-          >
-            <Reveal
-              className="glass-card spotlight-card rounded-[24px] md:rounded-[28px] p-6 md:p-8"
+          <div key={index} className="md:hidden">
+            <CertificationCard cert={cert} />
+          </div>
+        ))}
+
+        {certifications.map((cert) => (
+          <div key={`${cert.title}-desktop`} className="hidden md:block">
+            <Tilt
+              tiltMaxAngleX={3}
+              tiltMaxAngleY={3}
+              glareEnable={false}
+              scale={1}
+              transitionSpeed={500}
+              className="rounded-[28px]"
             >
-              <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-6">
-                {cert.issuer}
-              </p>
-
-              <h3 className="text-2xl md:text-3xl font-medium tracking-tight leading-tight">
-                {cert.title}
-              </h3>
-
-              <p className="mt-6 text-neutral-500">Issued in {cert.year}</p>
-            </Reveal>
-          </Tilt>
+              <CertificationCard cert={cert} />
+            </Tilt>
+          </div>
         ))}
       </div>
     </section>

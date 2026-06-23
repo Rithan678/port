@@ -201,6 +201,11 @@ section {
   color: #111111;
 }
 
+.gpu {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
 @media (max-width: 768px) {
   * {
     animation-duration: 0.4s !important;

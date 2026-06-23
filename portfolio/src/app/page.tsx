@@ -27,6 +27,7 @@ import ConsoleMessage from "../components/ConsoleMessage";
 import TerminalMode from "../components/TerminalMode";
 import StatsSection from "../components/StatsSection";
 import ThemeSwitcher from "../components/ThemeSwitcher";
+import WorkingOn from "../components/WorkingOn";
 
 export default function Home() {
   return (
@@ -56,6 +57,10 @@ export default function Home() {
 
         <Reveal>
           <Experience />
+        </Reveal>
+
+        <Reveal>
+          <WorkingOn />
         </Reveal>
 
         <div className="hidden md:block">

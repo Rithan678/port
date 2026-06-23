@@ -22,6 +22,13 @@ export default function SelectedWork() {
       desc: "An editorial design system for storytelling, layout, and publication impact.",
       image: `${basePath}/iqac.jpg`,
     },
+    {
+      title: "Study Apart",
+      desc: "A student part-time job platform in development that connects students with short-term and recurring work opportunities.",
+      subtitle: "Student Part-Time Job Platform",
+      stack: "HTML, CSS and 6+ skills",
+      type: "text",
+    },
   ];
 
   const [selectedProject, setSelectedProject] =
@@ -134,7 +141,7 @@ export default function SelectedWork() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6">
             <div className="hidden md:block">
               <Tilt
                 tiltMaxAngleX={6}
@@ -176,6 +183,45 @@ export default function SelectedWork() {
               </Tilt>
             </div>
 
+            <div className="hidden md:block">
+              <Tilt
+                tiltMaxAngleX={4}
+                tiltMaxAngleY={4}
+                glareEnable={false}
+                scale={1.01}
+                transitionSpeed={1500}
+                className="rounded-[24px] md:rounded-[32px]"
+              >
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  transition={{ duration: 0.4 }}
+                  onClick={() => setSelectedProject(projects[2])}
+                  className="glass-card spotlight-card group relative cursor-pointer overflow-hidden rounded-[24px] md:rounded-[32px] border border-white/10 bg-gradient-to-br from-sky-500/10 via-white/5 to-violet-500/10 p-6 md:p-8"
+                >
+                  <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-sky-400/10 blur-[60px]" />
+                  <p className="mb-4 text-xs uppercase tracking-[0.3em] text-neutral-400">
+                    Web Platform
+                  </p>
+
+                  <h3 className="text-2xl font-medium tracking-tight md:text-4xl">
+                    Study Apart
+                  </h3>
+
+                  <p className="mt-4 max-w-xl text-neutral-300">
+                    {projects[2].desc}
+                  </p>
+
+                  <p className="mt-6 text-sm uppercase tracking-[0.2em] text-neutral-500">
+                    {projects[2].subtitle}
+                  </p>
+
+                  <p className="mt-2 text-sm text-neutral-400">
+                    {projects[2].stack}
+                  </p>
+                </motion.div>
+              </Tilt>
+            </div>
+
             <div className="md:hidden">
               <div
                 onClick={() => setSelectedProject(projects[1])}
@@ -202,6 +248,34 @@ export default function SelectedWork() {
                     </h3>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="md:hidden">
+              <div
+                onClick={() => setSelectedProject(projects[2])}
+                className="glass-card spotlight-card group relative cursor-pointer overflow-hidden rounded-[24px] md:rounded-[32px] border border-white/10 bg-gradient-to-br from-sky-500/10 via-white/5 to-violet-500/10 p-6"
+              >
+                <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-sky-400/10 blur-[40px]" />
+                <p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-neutral-400">
+                  Web Platform
+                </p>
+
+                <h3 className="text-2xl font-medium tracking-tight">
+                  Study Apart
+                </h3>
+
+                <p className="mt-4 max-w-xl text-neutral-300">
+                  {projects[2].desc}
+                </p>
+
+                <p className="mt-6 text-[10px] uppercase tracking-[0.2em] text-neutral-500">
+                  {projects[2].subtitle}
+                </p>
+
+                <p className="mt-2 text-sm text-neutral-400">
+                  {projects[2].stack}
+                </p>
               </div>
             </div>
 

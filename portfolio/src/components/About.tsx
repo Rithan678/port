@@ -3,12 +3,36 @@
 import Reveal from "./Reveal";
 
 const skills = [
-  "MERN Stack",
-  "UI/UX Design",
-  "Editorial Design",
-  "Creative Direction",
-  "AI Workflows",
-  "Visual Storytelling",
+  {
+    title: "MERN Stack",
+    desc: "Building scalable fullstack web applications.",
+    icon: "💻",
+  },
+  {
+    title: "UI/UX Design",
+    desc: "Designing intuitive and beautiful experiences.",
+    icon: "🎨",
+  },
+  {
+    title: "Editorial Design",
+    desc: "Creating magazines, bulletins and publications.",
+    icon: "📖",
+  },
+  {
+    title: "Creative Direction",
+    desc: "Combining design, strategy and storytelling.",
+    icon: "✨",
+  },
+  {
+    title: "AI Workflows",
+    desc: "Using AI tools to improve productivity and creativity.",
+    icon: "🤖",
+  },
+  {
+    title: "Visual Storytelling",
+    desc: "Communicating ideas through engaging visuals.",
+    icon: "🎬",
+  },
 ];
 
 export default function About() {
@@ -50,6 +74,28 @@ export default function About() {
             communication, and creative systems to build experiences that feel
             both functional and meaningful.
           </p>
+
+          <div className="mt-12 grid grid-cols-2 gap-6 max-w-md">
+            <div>
+              <h3 className="text-2xl font-semibold">15+</h3>
+              <p className="text-neutral-500">Projects</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold">5+</h3>
+              <p className="text-neutral-500">Hackathons</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold">2+</h3>
+              <p className="text-neutral-500">Years Learning</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold">10+</h3>
+              <p className="text-neutral-500">Technologies</p>
+            </div>
+          </div>
         </Reveal>
 
         {/* RIGHT SIDE */}
@@ -57,9 +103,15 @@ export default function About() {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="glass-card rounded-3xl p-6"
+              className="glass-card rounded-3xl p-6 transition-all duration-300 hover:-translate-y-1"
             >
-              <p className="text-sm text-neutral-400">{skill}</p>
+              <div className="text-3xl mb-4">{skill.icon}</div>
+
+              <h3 className="text-lg font-medium">{skill.title}</h3>
+
+              <p className="mt-3 text-sm text-neutral-500 leading-relaxed">
+                {skill.desc}
+              </p>
             </div>
           ))}
         </Reveal>
